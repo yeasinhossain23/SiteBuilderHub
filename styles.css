@@ -1,60 +1,67 @@
 /* styles.css */
 
 /* Reset default margin and padding */
-* {
+body, ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Style the header */
-header {
-    background-color: #e0eaf5; /* Change background color to light blue */
-    color: #333; /* Keep text color as dark gray */
-    padding: 20px;
-    text-align: center;
-}
-
+/* Set body font and background */
 body {
-    background-color: #f5f5f5; /* Change background color of the entire page to light gray */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
-/* Style the navigation */
+/* Header styles */
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    color: #fff; /* Change link color to white */
+    list-style: none;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline-block; /* Display items in a line */
-    margin: 0 10px; /* Add spacing between items */
+    display: inline;
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove underline from links */
-    transition: all 0.3s ease; /* Add transition effect */
-    color: #333; /* Keep link color as dark gray */
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ff6600; /* Change hover color to orange */
-    transform: scale(1.1); /* Add scale effect on hover */
+    background-color: #555;
 }
 
-/* Style the main content */
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #555;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    display: block;
+}
+
+/* Main content styles */
 main {
     padding: 20px;
-    background-color: #f5f5f5; /* Change background color of main content to light gray */
 }
 
-/* Style the footer */
+/* Footer styles */
 footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background-color: #e0eaf5; /* Keep background color as light blue */
-    color: #333; /* Keep text color as dark gray */
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
+    font-size: 14px;
 }
