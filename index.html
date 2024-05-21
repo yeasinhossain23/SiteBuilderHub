@@ -15,8 +15,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><span>Practice</span>
-                <ul>
+            <li><span id="practice-button">Practice</span>
+                <ul id="practice-dropdown">
                     <li><a href="ict.html">ICT</a></li>
                     <li><a href="english.html">English</a></li>
                 </ul>
@@ -26,12 +26,19 @@
 </header>
 
 <main>
-    <!-- Main content of the practice page goes here :) -->
+    <!-- Main content of the practice page goes here -->
 </main>
 
 <footer>
     <p>&copy; 2024 SiteBuilderHub. All rights reserved.</p>
 </footer>
+
+<script>
+    document.getElementById('practice-button').addEventListener('click', function() {
+        var dropdown = document.getElementById('practice-dropdown');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+</script>
 
 </body>
 </html> 
