@@ -12,21 +12,29 @@ header {
     background-color: #333;
     color: #fff;
     padding: 20px;
+    text-align: center; /* Center align the content */
 }
 
 /* Style the navigation */
 nav ul {
     list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block; /* Display items in a line */
+    margin: 0 10px; /* Add spacing between items */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link color */
+    transition: all 0.3s ease; /* Add transition effect */
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Change color on hover */
+    transform: scale(1.1); /* Add scale effect on hover */
 }
 
 /* Style the main content */
