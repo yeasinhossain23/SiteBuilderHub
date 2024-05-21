@@ -12,7 +12,7 @@ body {
     background-color: #f4f4f4;
     min-height: 100vh;
     position: relative;
-    color: #333; /* Set a default text color to ensure visibility */
+    color: #333;
 }
 
 /* Header styles */
@@ -23,7 +23,7 @@ header {
 
 /* Navigation styles */
 nav {
-    background-color: #333; /* Ensure the nav bar background is consistent */
+    background-color: #333;
 }
 
 nav ul {
@@ -38,7 +38,7 @@ nav ul li {
 
 nav ul li a, nav ul li span {
     text-decoration: none;
-    color: #fff; /* White text for better contrast against dark background */
+    color: #fff;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
     display: block;
@@ -70,7 +70,7 @@ nav ul ul li {
 
 /* Active class for current section */
 nav ul li a.active, nav ul li span.active {
-    background-color: #ff6600; /* Highlight color for active item */
+    background-color: #ff6600;
 }
 
 /* Main content styles */
