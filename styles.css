@@ -30,15 +30,16 @@ nav ul li {
     position: relative; /* Position the nested UL absolutely relative to the LI */
 }
 
-nav ul li a {
+nav ul li a, nav ul li span {
     text-decoration: none;
     color: #fff;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
     display: block;
+    cursor: pointer; /* Make cursor a pointer for the span */
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li span:hover {
     background-color: #555;
 }
 
@@ -74,4 +75,4 @@ footer {
     position: absolute;
     width: 100%;
     bottom: 0;
-}
+} 
