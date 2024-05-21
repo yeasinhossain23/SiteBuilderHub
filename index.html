@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiteBuilderHub - Home</title>
+    <title>Home - SiteBuilderHub</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
+    <div id="nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
+    <main>
+        <section>
+            <h2>Welcome to SiteBuilderHub</h2>
+            <p>SiteBuilderHub is your go-to resource for learning how to build and maintain websites. Whether you're a beginner looking to create your first site or an experienced developer seeking advanced tips, we've got you covered.</p>
+            <p>Explore our tutorials, read up on the latest industry news, and connect with a community of like-minded enthusiasts.</p>
+            <p>Get started with our most popular topics:</p>
+            <ul>
+                <li><a href="ict.html">Information and Communication Technology (ICT)</a></li>
+                <li><a href="english.html">English Language and Writing</a></li>
+            </ul>
+        </section>
+    </main>
 
-<main>
-    <!-- Main content of the home page goes here -->
-</main>
-
-<div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
 <script>
     function loadHTML(id, url, callback) {
@@ -40,8 +47,7 @@
 
     function closeDropdown(event) {
         var dropdown = document.getElementById('practice-dropdown');
-        var button = document.getElementById('nav-practice');
-        if (dropdown.style.display === 'block' && !button.contains(event.target) && !dropdown.contains(event.target)) {
+        if (dropdown.style.display === 'block' && !dropdown.contains(event.target)) {
             dropdown.style.display = 'none';
         }
     }
