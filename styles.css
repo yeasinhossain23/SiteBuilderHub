@@ -10,6 +10,8 @@ body, ul {
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    min-height: 100vh; /* Ensure content stretches to at least the height of the viewport */
+    position: relative;
 }
 
 /* Header styles */
@@ -24,7 +26,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Use inline-block to stack items horizontally */
+    position: relative; /* Position the nested UL absolutely relative to the LI */
 }
 
 nav ul li a {
@@ -32,6 +35,7 @@ nav ul li a {
     color: #fff;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
+    display: block;
 }
 
 nav ul li a:hover {
@@ -42,6 +46,9 @@ nav ul ul {
     display: none;
     position: absolute;
     background-color: #555;
+    width: 100%; /* Make the dropdown menu full width */
+    top: 100%; /* Position dropdowns below their parent LI */
+    left: 0;
 }
 
 nav ul li:hover > ul {
@@ -62,6 +69,9 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
+    padding: 10px 0; /* Decrease padding */
+    font-size: 12px; /* Decrease font size */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
