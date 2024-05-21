@@ -12,6 +12,7 @@ body {
     background-color: #f4f4f4;
     min-height: 100vh;
     position: relative;
+    color: #333; /* Set a default text color to ensure visibility */
 }
 
 /* Header styles */
@@ -64,7 +65,7 @@ nav ul ul li {
 
 /* Active class for current section */
 nav ul li a.active, nav ul li span.active {
-    background-color: #ff6600; /* Change color to highlight the active section */
+    background-color: #ff6600;
 }
 
 /* Main content styles */
