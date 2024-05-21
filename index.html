@@ -9,16 +9,29 @@
 </head>
 <body>
 
-<?php include 'nav.html'; ?>
+<div id="nav-placeholder"></div>
 
 <main>
     <!-- Main content of the home page goes here -->
 </main>
 
-<?php include 'footer.html'; ?>
+<div id="footer-placeholder"></div>
 
 <script>
-    document.getElementById('nav-home').classList.add('active');
+    // Function to load HTML content
+    function loadHTML(id, url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(id).innerHTML = data;
+                if (id === 'nav-placeholder') {
+                    document.getElementById('nav-home').classList.add('active');
+                }
+            });
+    }
+
+    loadHTML('nav-placeholder', 'nav.html');
+    loadHTML('footer-placeholder', 'footer.html');
 </script>
 </body>
 </html> 
