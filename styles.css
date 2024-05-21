@@ -19,8 +19,8 @@ body {
 header {
     background-color: #333;
     padding: 20px 0;
-    color: white; /* Ensure text is visible against dark background */
-    text-align: center; /* Center align the header text */
+    color: white;
+    text-align: center;
 }
 
 /* Navigation styles */
