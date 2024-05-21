@@ -15,6 +15,10 @@ header {
     text-align: center;
 }
 
+body {
+    background-color: #f5f5f5; /* Change background color of the entire page to light gray */
+}
+
 /* Style the navigation */
 nav ul {
     list-style-type: none;
