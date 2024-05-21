@@ -12,7 +12,7 @@
     <main>
         <section>
             <h2>English</h2>
-            <p>Welcome to the English section.Here you can find various resources and articles about the English language.</p>
+            <p>Welcome to the English section. Here you can find various resources and articles about the English language.</p>
         </section>
     </main>
 
@@ -47,7 +47,8 @@
     }
 
     loadHTML('nav-placeholder', 'nav.html', function() {
-        document.getElementById('nav-english').classList.add('active');
+        document.getElementById('nav-practice').classList.add('active');
+        document.getElementById('nav-english').classList.add('active-sub');
         document.getElementById('nav-practice').addEventListener('click', toggleDropdown);
     });
 
