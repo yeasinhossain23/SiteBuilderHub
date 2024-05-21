@@ -18,20 +18,21 @@
 <div id="footer-placeholder"></div>
 
 <script>
-    // Function to load HTML content
-    function loadHTML(id, url) {
+    function loadHTML(id, url, callback) {
         fetch(url)
             .then(response => response.text())
             .then(data => {
                 document.getElementById(id).innerHTML = data;
-                if (id === 'nav-placeholder') {
-                    document.getElementById('nav-home').classList.add('active');
-                }
-            });
+                if (callback) callback();
+            })
+            .catch(error => console.error('Error loading HTML:', error));
     }
 
-    loadHTML('nav-placeholder', 'nav.html');
+    loadHTML('nav-placeholder', 'nav.html', function() {
+        document.getElementById('nav-home').classList.add('active');
+    });
     loadHTML('footer-placeholder', 'footer.html');
 </script>
+
 </body>
 </html> 
