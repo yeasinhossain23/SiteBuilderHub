@@ -75,6 +75,11 @@ nav ul li a.active, nav ul li span.active {
     background-color: #ff6600;
 }
 
+/* Sub-active class for subsections */
+nav ul li a.active-sub, nav ul li span.active-sub {
+    background-color: #ff9900;
+}
+
 /* Main content styles */
 main {
     padding: 20px;
