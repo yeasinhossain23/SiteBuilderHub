@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
@@ -14,13 +16,13 @@ header {
 }
 
 nav {
-    background-color: #f9f9f9;
+    background-color: #333;
+    text-align: center;
     padding: 10px;
 }
 
 ul {
     list-style-type: none;
-    text-align: center;
 }
 
 ul li {
@@ -30,7 +32,7 @@ ul li {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: white;
 }
 
 main {
@@ -38,7 +40,7 @@ main {
 }
 
 section {
-    background-color: #f2f2f2;
+    background-color: #fff;
     padding: 20px;
     margin: 20px 0;
 }
