@@ -47,7 +47,8 @@
     }
 
     loadHTML('nav-placeholder', 'nav.html', function() {
-        document.getElementById('nav-ict').classList.add('active');
+        document.getElementById('nav-practice').classList.add('active');
+        document.getElementById('nav-ict').classList.add('active-sub');
         document.getElementById('nav-practice').addEventListener('click', toggleDropdown);
     });
 
