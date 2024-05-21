@@ -69,7 +69,7 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0; /* Decrease padding */
+    padding: 5px 0; /* Decrease padding */
     font-size: 12px; /* Decrease font size */
     position: absolute;
     width: 100%;
