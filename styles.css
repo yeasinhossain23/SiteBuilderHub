@@ -9,8 +9,8 @@
 
 /* Style the header */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #ff6600; /* Change background color to orange */
+    color: #fff; /* Change text color to white */
     padding: 20px;
     text-align: center; /* Center align the content */
 }
@@ -19,6 +19,7 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    color: #fff; /* Change link color to white */
 }
 
 nav ul li {
@@ -28,12 +29,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none; /* Remove underline from links */
-    color: #333; /* Set link color */
     transition: all 0.3s ease; /* Add transition effect */
+    color: #fff; /* Change link color to white */
 }
 
 nav ul li a:hover {
-    color: #ff6600; /* Change color on hover */
+    color: #333; /* Change hover color to dark gray */
     transform: scale(1.1); /* Add scale effect on hover */
 }
 
