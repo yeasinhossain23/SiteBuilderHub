@@ -21,6 +21,11 @@ header {
     padding: 20px 0;
 }
 
+/* Navigation styles */
+nav {
+    background-color: #333; /* Ensure the nav bar background is consistent */
+}
+
 nav ul {
     list-style: none;
     text-align: center;
@@ -33,7 +38,7 @@ nav ul li {
 
 nav ul li a, nav ul li span {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* White text for better contrast against dark background */
     padding: 10px 20px;
     transition: background-color 0.3s ease;
     display: block;
@@ -65,7 +70,7 @@ nav ul ul li {
 
 /* Active class for current section */
 nav ul li a.active, nav ul li span.active {
-    background-color: #ff6600;
+    background-color: #ff6600; /* Highlight color for active item */
 }
 
 /* Main content styles */
