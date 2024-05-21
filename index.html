@@ -28,10 +28,32 @@
             .catch(error => console.error('Error loading HTML:', error));
     }
 
+    function toggleDropdown(event) {
+        var dropdown = document.getElementById('practice-dropdown');
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+        event.stopPropagation(); // Prevent event from bubbling up to document
+    }
+
+    function closeDropdown(event) {
+        var dropdown = document.getElementById('practice-dropdown');
+        var button = document.getElementById('nav-practice');
+        if (dropdown.style.display === 'block' && !button.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.style.display = 'none';
+        }
+    }
+
     loadHTML('nav-placeholder', 'nav.html', function() {
         document.getElementById('nav-home').classList.add('active');
+        document.getElementById('nav-practice').addEventListener('click', toggleDropdown);
     });
+
     loadHTML('footer-placeholder', 'footer.html');
+
+    document.addEventListener('click', closeDropdown);
 </script>
 
 </body>
