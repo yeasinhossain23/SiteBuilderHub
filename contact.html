@@ -25,6 +25,162 @@
             </ul>
         </section>
     </main>
-    <div id="footer-placeholder"></div> 
+    <div id="footer-placeholder"></div>
+
+<script>
+    function loadHTML(id, url, callback) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(id).innerHTML = data;
+                if (callback) callback();
+            })
+            .catch(error => console.error('Error loading HTML:', error));
+    }
+
+    function toggleDropdown(event) {
+        var dropdown = document.getElementById('practice-dropdown');
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+        event.stopPropagation(); // Prevent event from bubbling up to document
+    }
+
+    function closeDropdown(event) {
+        var dropdown = document.getElementById('practice-dropdown');
+        var button = document.getElementById('nav-contact');
+        if (dropdown.style.display === 'block' && !button.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.style.display = 'none';
+        }
+    }
+
+    loadHTML('nav-placeholder', 'nav.html', function() {
+        document.getElementById('nav-home').classList.add('active');
+        document.getElementById('nav-practice').addEventListener('click', toggleDropdown);
+    });
+
+    loadHTML('footer-placeholder', 'footer.html');
+
+    document.addEventListener('click', closeDropdown);
+</script>
+
+</body>
+</html>
+CSS Adjustments
+Ensure your CSS handles the visibility and active state properly.
+
+styles.css
+
+css
+Copy code
+/* styles.css */
+
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set body font and background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    position: relative;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a, nav ul li span {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+nav ul li a:hover, nav ul li span:hover {
+    background-color: #555;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+nav ul li:hover > ul, nav ul li:focus-within > ul {
+    display: block;
+}
+
+nav ul ul li {
+    display: block;
+}
+
+/* Active class for current section */
+nav ul li a.active, nav ul li span.active {
+    background-color: #ff6600;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+Summary
+toggleDropdown Function: This function toggles the visibility of the dropdown menu. It stops the event from propagating to prevent immediate closure.
+closeDropdown Function: This function checks if the dropdown is open and if the click occurred outside the dropdown and the button, then it closes the dropdown.
+Event Listeners: The "Practice" button has an event listener to toggle the dropdown. The document has an event listener to close the dropdown when clicking outside.
+This setup ensures that the dropdown menu can be toggled by clicking the "Practice" button and will close if you click anywhere outside of it.
+
+
+
+
+
+
+
+Message ChatGPT
+
+
+ChatGPT can ma  
 </body>
 </html>
