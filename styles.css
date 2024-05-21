@@ -37,6 +37,8 @@ nav ul li a, nav ul li span {
     transition: background-color 0.3s ease;
     display: block;
     cursor: pointer; /* Make cursor a pointer for the span */
+    user-select: none; /* Prevent text selection */
+    touch-action: manipulation; /* Improve touch interaction */
 }
 
 nav ul li a:hover, nav ul li span:hover {
@@ -52,7 +54,8 @@ nav ul ul {
     left: 0;
 }
 
-nav ul li:hover > ul {
+nav ul li:hover > ul,
+nav ul li:focus-within > ul {
     display: block;
 }
 
@@ -70,7 +73,7 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 5px 0; /* Decrease padding */
+    padding: 1px 0; /* Decrease padding */
     font-size: 12px; /* Decrease font size */
     position: absolute;
     width: 100%;
