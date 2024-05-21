@@ -15,7 +15,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><span id="practice-button">Practice</span>
+            <li>
+                <span id="practice-button">Practice</span>
                 <ul id="practice-dropdown">
                     <li><a href="ict.html">ICT</a></li>
                     <li><a href="english.html">English</a></li>
@@ -34,10 +35,27 @@
 </footer>
 
 <script>
-    document.getElementById('practice-button').addEventListener('click', function() {
+    // Function to toggle the dropdown menu
+    function toggleDropdown(event) {
         var dropdown = document.getElementById('practice-dropdown');
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    });
+        event.stopPropagation(); // Prevent event from bubbling up to document
+    }
+
+    // Function to close the dropdown menu if clicked outside
+    function closeDropdown(event) {
+        var dropdown = document.getElementById('practice-dropdown');
+        var button = document.getElementById('practice-button');
+        if (dropdown.style.display === 'block' && !button.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.style.display = 'none';
+        }
+    }
+
+    // Add event listener to the Practice button
+    document.getElementById('practice-button').addEventListener('click', toggleDropdown);
+
+    // Add event listener to the document to close the dropdown if clicked outside
+    document.addEventListener('click', closeDropdown);
 </script>
 
 </body>
