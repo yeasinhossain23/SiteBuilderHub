@@ -10,7 +10,7 @@ body, ul {
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    min-height: 100vh; /* Ensure content stretches to at least the height of the viewport */
+    min-height: 100vh;
     position: relative;
 }
 
@@ -26,8 +26,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Use inline-block to stack items horizontally */
-    position: relative; /* Position the nested UL absolutely relative to the LI */
+    display: inline-block;
+    position: relative;
 }
 
 nav ul li a, nav ul li span {
@@ -36,9 +36,9 @@ nav ul li a, nav ul li span {
     padding: 10px 20px;
     transition: background-color 0.3s ease;
     display: block;
-    cursor: pointer; /* Make cursor a pointer for the span */
-    user-select: none; /* Prevent text selection */
-    touch-action: manipulation; /* Improve touch interaction */
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 nav ul li a:hover, nav ul li span:hover {
@@ -49,18 +49,22 @@ nav ul ul {
     display: none;
     position: absolute;
     background-color: #555;
-    width: 100%; /* Make the dropdown menu full width */
-    top: 100%; /* Position dropdowns below their parent LI */
+    width: 100%;
+    top: 100%;
     left: 0;
 }
 
-nav ul li:hover > ul,
-nav ul li:focus-within > ul {
+nav ul li:hover > ul, nav ul li:focus-within > ul {
     display: block;
 }
 
 nav ul ul li {
     display: block;
+}
+
+/* Active class for current section */
+nav ul li a.active, nav ul li span.active {
+    background-color: #ff6600; /* Change color to highlight the active section */
 }
 
 /* Main content styles */
@@ -73,8 +77,8 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1px 0; /* Decrease padding */
-    font-size: 12px; /* Decrease font size */
+    padding: 5px 0;
+    font-size: 12px;
     position: absolute;
     width: 100%;
     bottom: 0;
